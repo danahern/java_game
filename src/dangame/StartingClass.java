@@ -3,8 +3,10 @@ package dangame;
 import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Frame;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class StartingClass extends Applet implements Runnable {
+public class StartingClass extends Applet implements Runnable, KeyListener {
 	@Override
 	public void init() {
 		setSize(800, 600);
@@ -40,5 +42,23 @@ public class StartingClass extends Applet implements Runnable {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
