@@ -46,9 +46,7 @@ public class Robot {
 
 		// Handles Jumping
 		if (jumped == true) {
-			speedY += 1; // While the character is in the air, add 1 to his
-							// speedY.
-							// NOTE: This will bring the character downwards!
+			speedY += 1; // While the character is in the air, add 1 to his speedY NOTE: This will bring the character downwards!
 
 			if (centerY + speedY >= GROUND) {
 				centerY = GROUND;

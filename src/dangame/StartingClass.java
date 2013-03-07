@@ -61,6 +61,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 	public void run() {
 		while (true) {
 			robot.update();
+			System.out.println(robot.isJumped());
 			if (robot.isJumped()){
 				currentSprite = characterJumped;
 			}else if (robot.isJumped() == false && robot.isDucked() == false){
@@ -99,7 +100,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 				bg1.getBgY(), this);
 		g.drawImage(background, bg2.getBgX(),
 				bg2.getBgY(), this);
-		g.drawImage(character, robot.getCenterX() - 61,
+		g.drawImage(currentSprite, robot.getCenterX() - 61,
 				robot.getCenterY() - 63, this);
 	}
 
@@ -126,7 +127,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 			break;
 		case KeyEvent.VK_SPACE:
 			robot.jump();
-			System.out.println("Jump");
+			robot.setJumped(true);
 			break;
 		case KeyEvent.VK_ESCAPE:
 			System.exit(ABORT);
