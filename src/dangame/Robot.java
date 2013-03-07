@@ -1,5 +1,7 @@
 package dangame;
 
+import java.awt.Graphics;
+
 public class Robot {
 
 	// Constants are Here
@@ -100,7 +102,7 @@ public class Robot {
 
 	public void jump() {
 		if (jumped == false) {
-			speedY = -JUMPSPEED;
+			speedY = JUMPSPEED;
 			jumped = true;
 		}
 

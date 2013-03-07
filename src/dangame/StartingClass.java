@@ -61,7 +61,6 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 	public void run() {
 		while (true) {
 			robot.update();
-			System.out.println(robot.isJumped());
 			if (robot.isJumped()){
 				currentSprite = characterJumped;
 			}else if (robot.isJumped() == false && robot.isDucked() == false){
